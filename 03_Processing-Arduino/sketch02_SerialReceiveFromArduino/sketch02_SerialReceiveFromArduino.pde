@@ -17,12 +17,12 @@ void setup() {
 
 
 void draw() {
-  background(255);  
+  background(255);  //set background color
   fill(0);   
   int lf = 10;    // Linefeed in ASCII
 
   String buf = String.format("%06d, %.0f", frameCount, val1);
-  text(buf, 20,50);
+  text(buf, 20,50); 
   
   while (myPort.available() > 0) 
   {
@@ -30,7 +30,7 @@ void draw() {
     
     if (str1 != null) 
     {
-      val1 = float(str1);
+      val1 = float(str1); //if str is not null, set vall float(str1)
     }
   }
 }
